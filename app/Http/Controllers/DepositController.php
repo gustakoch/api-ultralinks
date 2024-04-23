@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Validator;
 class DepositController extends Controller
 {
     public function __construct(private DepositMoneyHandler $depositMoneyHandler)
-    {}
+    {
+    }
 
     public function deposit(Request $request)
     {

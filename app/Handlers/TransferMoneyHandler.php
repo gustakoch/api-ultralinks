@@ -11,7 +11,8 @@ class TransferMoneyHandler
     public function __construct(
         private AccountRepository $accountRepository,
         private TransferRepository $transferRepository,
-    ) {}
+    ) {
+    }
 
     public function handle(Request $request, int $senderUserId)
     {

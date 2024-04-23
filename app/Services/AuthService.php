@@ -16,7 +16,8 @@ class AuthService
         private UserRepository $userRepository,
         private AddressRepository $addressRepository,
         private AccountRepository $accountRepository,
-    ) {}
+    ) {
+    }
 
     public function register(Request $request)
     {

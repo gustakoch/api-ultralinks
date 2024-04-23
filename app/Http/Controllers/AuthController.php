@@ -11,7 +11,8 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 class AuthController extends Controller
 {
     public function __construct(private AuthService $authService)
-    {}
+    {
+    }
 
     public function register(Request $request)
     {
@@ -79,14 +80,10 @@ class AuthController extends Controller
     {
         $token = JWTAuth::getToken();
         $invalidate = JWTAuth::invalidate($token);
-
         if ($invalidate) {
-            return response()->json([
-                'code' => 200,
-                'status' => 'success',
-                'message' => 'Usuário deslogado com sucesso',
-                'data' => [],
-            ]);
+            $response = Response::array(false, 'Usuário deslogado com sucesso', []);
+
+            return response()->json($response);
         }
     }
 }

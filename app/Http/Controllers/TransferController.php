@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Validator;
 class TransferController extends Controller
 {
     public function __construct(private TransferMoneyHandler $transferMoneyHandler)
-    {}
+    {
+    }
 
     public function transfer(Request $request)
     {

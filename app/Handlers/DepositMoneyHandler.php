@@ -12,7 +12,8 @@ class DepositMoneyHandler
     public function __construct(
         private AccountRepository $accountRepository,
         private DepositRepository $depositRepository,
-    ) {}
+    ) {
+    }
 
     public function handle(Request $request)
     {
